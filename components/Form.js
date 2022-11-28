@@ -8,7 +8,7 @@ export default function Form({addArticle}) {
   return (
       <View>
 
-        <Formik initialValues={{name:'',anons:'---',full:'',img:'https://ic.pics.livejournal.com/lumixograf/31636610/3801118/3801118_1000.jpg'}} onSubmit={(value,action)=>{
+        <Formik initialValues={{name:'',anons:'--',full:'',img:'https://ic.pics.livejournal.com/lumixograf/31636610/3801118/3801118_1000.jpg'}} onSubmit={(value,action)=>{
              addArticle(value);
              action.resetForm();
         }}>
@@ -36,7 +36,7 @@ export default function Form({addArticle}) {
             value={propsKol.values.img}
             placeholder='рисунок'
             onChangeText={propsKol.handleChange('img')}/>
-            <Button title='доюавить' onPress={propsKol.handleSubmit}/>
+            <Button title='добавить' onPress={propsKol.handleSubmit}/>
         </View>
        )}
         </Formik>
